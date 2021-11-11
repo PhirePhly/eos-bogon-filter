@@ -31,7 +31,7 @@ to re-download the latest bogon list and refresh the prefix lists.
 ```
 SW1# mkdir flash:/pl-bogons
 SW1# copy https://raw.githubusercontent.com/PhirePhly/eos-bogon-filter/main/refresh-bogons.sh flash:/pl-bogons/
-SW1# bash /mnt/flash/pl-bogons/refresh-bogons.sh
+SW1# bash /mnt/flash/pl-bogons/refresh-bogons.sh -n
 SW1# configure
 SW1(config)# ip prefix-list pl-bogons-v4 source flash:/pl-bogons/pl-bogons-v4.txt
 SW1(config)# ipv6 prefix-list pl-bogons-v6 source flash:/pl-bogons/pl-bogons-v6.txt
